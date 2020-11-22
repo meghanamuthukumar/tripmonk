@@ -1,0 +1,261 @@
+<div class="wrapper container">
+    <br>
+    <p class="container text-left h12">Register Hotel</p> <br>
+    <div class="card card">
+        <div class="card-design-wrap">  <br>
+          <h3><span class="sub-head">GENERAL DETAILS</span></h3>
+          <form #form="ngForm" [formGroup]="hotelCreateForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Hotel Name</mat-label>
+                    <input type="text" matInput formControlName="hotel_name" maxlength="20" required/>
+                  </mat-form-field>
+                  <div *ngIf="(myForm.hotel_name.touched || submitted) && myForm.hotel_name.errors?.required">
+                    <div *ngIf="submitted && myForm.hotel_name.errors" class="error-block">
+                      <div *ngIf="myForm.hotel_name.errors.pattern">
+                        Enter only alphabets.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input type="text" matInput formControlName="address"/>
+                  </mat-form-field>
+                  <div *ngIf="(myForm.address.touched || submitted) && myForm.address.errors?.required">
+                    <div *ngIf="submitted && myForm.address.errors" class="error-block">
+                      <div *ngIf="myForm.address.errors.pattern">
+                        Enter valid address.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>City</mat-label>
+                    <input type="text" matInput formControlName="city" />
+                  </mat-form-field>
+                  <div *ngIf="(myForm.city.touched || submitted) && myForm.city.errors?.required">
+                    <div *ngIf="submitted && myForm.city.errors" class="error-block">
+                      <div *ngIf="myForm.city.errors.pattern">
+                        Enter valid city.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Nearest Airport</mat-label>
+                    <input type="text" matInput formControlName="nearest_airport" maxlength="100"/>
+                  </mat-form-field>
+                  <div *ngIf="(myForm.nearest_airport.touched || submitted) && myForm.nearest_airport.errors?.required">
+                    <div *ngIf="submitted && myForm.nearest_airport.errors" class="error-block">
+                      <div *ngIf="myForm.nearest_airport.errors.pattern">
+                        Enter only alphabets.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Distance from airport</mat-label>
+                    <input type="number" matInput formControlName="distance_from_airport" minlength="10" maxlength="10" required/>
+                  </mat-form-field>
+                  <div *ngIf="(myForm.distance_from_airport.touched || submitted) && myForm.distance_from_airport.errors?.required">
+                    <div *ngIf="submitted && myForm.distance_from_airport.errors" class="error-block">
+                      <div *ngIf="myForm.distance_from_airport.errors.pattern">
+                        Enter valid details.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <h3><span class="sub-head">MANAGER DETAILS</span></h3>            
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Manager Name</mat-label>
+                    <input type="text" matInput formControlName="manager_name" maxlength="20"/>
+                  </mat-form-field>
+                  <div *ngIf="(myForm.manager_name.touched || submitted) && myForm.manager_name.errors?.required">
+                    <div *ngIf="submitted && myForm.manager_name.errors" class="error-block">
+                      <div *ngIf="myForm.manager_name.errors.pattern">
+                        Enter only alphabets.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Manager Number</mat-label>
+                    <input type="number" matInput formControlName="manager_number1" minlength="10" maxlength="10" required/>
+                  </mat-form-field>
+                  <div *ngIf="(myForm.manager_number1.touched || submitted) && myForm.manager_number1.errors?.required">
+                    <div *ngIf="submitted && myForm.manager_number1.errors" class="error-block">
+                      <div *ngIf="myForm.manager_number1.errors.pattern">
+                        Enter valid details.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Alternate Number</mat-label>
+                    <input type="number" matInput formControlName="manager_number2" minlength="10" maxlength="10" required/>
+                  </mat-form-field>
+                  <div *ngIf="(myForm.manager_number2.touched || submitted) && myForm.manager_number2.errors?.required">
+                    <div *ngIf="submitted && myForm.manager_number2.errors" class="error-block">
+                      <div *ngIf="myForm.manager_number2.errors.pattern">
+                        Enter valid details.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3><span class="sub-head">AMMENITIES DETAILS</span></h3>  
+            <h3>[0: 'No', 1: 'Yes']</h3>          
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>WiFi?</mat-label>
+                    <select matNativeControl formControlName="wifi" >
+                      <option value="" disabled></option>
+                      <option *ngFor="let option of Option" [ngValue]="option">{{option}}</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div> 
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Swimming Pool?</mat-label>
+                    <select matNativeControl formControlName="swimming_pool" >
+                      <option value="" disabled></option>
+                      <option *ngFor="let option of Option" [ngValue]="option">{{option}}</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div> 
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Breakfast?</mat-label>
+                    <select matNativeControl formControlName="breakfast" >
+                      <option value="" disabled></option>
+                      <option *ngFor="let option of Option" [ngValue]="option">{{option}}</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div> 
+            </div>  
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Spa?</mat-label>
+                    <select matNativeControl formControlName="spa" >
+                      <option value="" disabled></option>
+                      <option *ngFor="let option of Option" [ngValue]="option">{{option}}</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div> 
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Indoor games?</mat-label>
+                    <select matNativeControl formControlName="indoor_games" >
+                      <option value="" disabled></option>
+                      <option *ngFor="let option of Option" [ngValue]="option">{{option}}</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div> 
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Laundry?</mat-label>
+                    <select matNativeControl formControlName="laundry" >
+                      <option value="" disabled></option>
+                      <option *ngFor="let option of Option" [ngValue]="option">{{option}}</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div> 
+            </div>           
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Cab services?</mat-label>
+                    <select matNativeControl formControlName="cab_services" >
+                      <option value="" disabled></option>
+                      <option *ngFor="let option of Option" [ngValue]="option">{{option}}</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div> 
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Restaurant?</mat-label>
+                    <select matNativeControl formControlName="restaurant" >
+                      <option value="" disabled></option>
+                      <option *ngFor="let option of Option" [ngValue]="option">{{option}}</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div> 
+              <div class="col-12 col-md-4">
+                <div class="form-group row-space">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Room Service?</mat-label>
+                    <select matNativeControl formControlName="room_service" >
+                      <option value="" disabled></option>
+                      <option *ngFor="let option of Option" [ngValue]="option">{{option}}</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div> 
+            </div>   
+            <div class="row">
+              <div class="col-md-12"><br>
+                <div class="form-group float-right">
+
+                  <!-- <button type="reset" class="reset" mat-button>
+                    <fa-icon class="redo fa-2x" [icon]="faRedo" aria-hidden="true" (click)="resetForm()"></fa-icon>
+                  </button> <br class="d-lg-none"> <br class="d-lg-none"> -->
+                  <input class="btn btnwarn btnfont cancel1" type="reset" value="Cancel"  (click)="redirect()" style="margin-right: 20px;"> <br class="d-lg-none"> <br class="d-lg-none">
+                    <!--<button class="btn btn-success btn-lg submit1" type="submit">
+                      Submit
+                    </button>-->
+                    <input class="btn btnsuccess btnfont" type="submit" value="Submit">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+</div>

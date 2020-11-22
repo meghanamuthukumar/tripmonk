@@ -1,0 +1,176 @@
+.img-full{
+    /* The image used */
+  background-image: url("./../../../assets/images/farmland.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//tabs
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+.mat-form-field{
+    width: 95%;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+
+
+a {
+  color: #ccc;
+  text-decoration: none;
+  outline: none;
+}
+
+/*Fun begins*/
+.tab_container {
+    position: relative;
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 70px;
+    position: relative;
+    //opacity: 0.6;
+}
+.tab-content{
+    background-color: rgba(117, 117, 117, 0.747);
+}
+.checked{
+    clear: both;
+    display: none;
+}
+section {
+  clear: both;
+  display: none;
+  
+}
+
+label {
+  font-weight: 700;
+  font-size: 18px;
+  display: block;
+  float: left;
+  width: 20%;
+  padding: 1.5em;
+  color: #757575;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background: rgb(240, 240, 240, 0.7);
+  border-radius: 7px 7px 0px 0px;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+  display: block;
+  padding: 20px;
+  background: #fff;
+  color: #999;
+  border-bottom: 2px solid #f0f0f0;
+  border-radius: 0px 7px 7px 7px;
+}
+
+.tab_container .tab-content p,
+.tab_container .tab-content h3 {
+  -webkit-animation: fadeInScale 0.7s ease-in-out;
+  -moz-animation: fadeInScale 0.7s ease-in-out;
+  animation: fadeInScale 0.7s ease-in-out;
+}
+/*.tab_container .tab-content h3  {
+  text-align: center;
+}*/
+
+.tab_container [id^="tab"]:checked + label {
+  background: rgb(255, 255, 255, 0.9);
+  box-shadow: inset 0 7px #0000ff;
+}
+
+.tab_container [id^="tab"]:checked + label .fa {
+  color: #0000ff;
+}
+
+label .fa {
+  font-size: 1.3em;
+  margin: 0 0.4em 0 0;
+}
+
+/*Media query*/
+@media only screen and (max-width: 900px) {
+  label span {
+    display: none;
+  }
+  
+  .tab_container {
+    width: 98%;
+  }
+}
+
+/*Content Animation*/
+@keyframes fadeInScale {
+  0% {
+  	transform: scale(0.9);
+  	opacity: 0;
+  }
+  
+  100% {
+  	transform: scale(1);
+  	opacity: 1;
+  }
+}
+
+.no_wrap {
+  text-align:center;
+  color: #0000ff;
+}
+.link {
+  text-align:center;
+}
+// desktops
+/*desktops and laptops*/
+@media only screen and (min-width: 1090px) {
+    .tab_container{
+        position: relative;
+        top: 35%;
+    }
+}
+
+.forward{
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    background: #0000ff;
+    border-radius: 6px;
+    margin-top: 4px;
+    margin-left: 30px;
+}
+.forward-icon{
+    font-size: 30px;
+}

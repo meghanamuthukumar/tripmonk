@@ -1,0 +1,123 @@
+<div class="img-full">
+    
+	<div class="tab_container">
+        <input class="checked" id="tab1" type="radio" name="tabs" checked>
+		<label for="tab1"><i class="fa fa-building"></i><span>Hotels</span></label>
+
+		<input class="checked" id="tab2" type="radio" name="tabs">
+		<label for="tab2"><i class="fa fa-plane"></i><span>Flights</span></label>
+
+		<input class="checked" id="tab3" type="radio" name="tabs">
+		<label for="tab3"><i class="fa fa-train"></i><span>Trains</span></label>
+
+		<input class="checked" id="tab4" type="radio" name="tabs">
+		<label for="tab4"><i class="fa fa-bus"></i><span>Buses</span></label>
+
+        <!-- hotel -->
+		<section id="content1" class="tab-content">
+            <form #form="ngForm">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <div class="form-group row-space">
+                        <mat-form-field appearance="outline">
+                            <mat-label>CITY</mat-label>
+                            <mat-icon matSuffix>location_on</mat-icon>
+                            <input type="text" matInput maxlength="20"/>
+                        </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <div class="form-group row-space">
+                            <mat-form-field appearance="outline">
+                                <mat-label>CHECK IN</mat-label>
+                                <input matInput [matDatepicker]="picker1">
+                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                <mat-datepicker #picker1 color="primary"></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <div class="form-group row-space">
+                            <mat-form-field appearance="outline">
+                                <mat-label>CHECK OUT</mat-label>
+                                <input matInput [matDatepicker]="picker2">
+                                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <div class="form-group row-space">
+                        <mat-form-field appearance="outline">
+                            <mat-label>ROOMS</mat-label>
+                            <input type="number" matInput/>
+                        </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-1">
+                        <div class="form-group row-space">
+                        <mat-form-field appearance="outline">
+                            <mat-label>GUESTS</mat-label>
+                            <input type="number" matInput/>
+                        </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <button class="forward"><span class="material-icons forward-icon">
+                            arrow_forward
+                            </span></button>
+                    </div>
+                </div> 
+            </form>
+		</section>
+
+        <!-- flights -->
+		<section id="content2" class="tab-content">
+			<h3>Headline 2</h3>
+		   	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		   	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section>
+
+        <!-- trains -->
+		<section id="content3" class="tab-content">
+			<h3>Headline 3</h3>
+		   	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		   	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		   	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		   	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		   	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		   	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		   	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		   	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		   	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		   	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		   	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		   	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section>
+
+        <!-- buses -->
+		<section id="content4" class="tab-content">
+		    <h3>Headline 4</h3>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    tempor incididunt ut labore et dolore magna aliqua.</p>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    cillum dolore eu fugiat nulla pariatur.</p>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    consequat.</p>
+		</section>
+
+	</div>
+
+</div>
